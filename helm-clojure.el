@@ -21,7 +21,7 @@
 
 ;;; Commentary:
 
-https://github.com/prepor/helm-clojure
+;;; https://github.com/prepor/helm-clojure
 
 ;;
 
