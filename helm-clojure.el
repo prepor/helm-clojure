@@ -39,13 +39,15 @@
     (insert-file-contents filePath)
     (buffer-string)))
 
+(defvar helm-clojure--file load-file-name)
+
 (defun helm-clojure-inject ()
   (let* ((res (nrepl-send-string-sync "(find-ns 'helm-clojure)")))
     (when (equal "nil" (plist-get res :value))
       (nrepl-send-string-sync
        (helm--get-string-from-file
         (expand-file-name "helm-clojure.clj" (file-name-directory
-                                              (or load-file-name buffer-file-name))))))))
+                                              (or helm-clojure--file buffer-file-name))))))))
 
 (defvar helm-clojure-f-width 45)
 (defvar helm-clojure-persistent-primary t)
@@ -250,11 +252,10 @@ if SAVE-EXCURSION is T POINT does not move."
 ;; - TODO check jump backs
 ;;;###autoload
 (defun helm-clojure ()
-  "Preconfigured `helm' for `imenu'."
+  "`helm' mode for clojrue based on `cider'."
   (interactive)
   (helm :sources 'helm-source-clojure
-        :buffer "*helm clojure*"
-        :clojure-persistant-primary t))
+        :buffer "*helm clojure*"))
 
 (provide 'helm-clojure)
 ;;; helm-clojure.el ends here

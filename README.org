@@ -3,7 +3,7 @@ Emacs package based on [[https://github.com/emacs-helm/helm][helm]] and [[https:
 ** Installation
 With [[https://github.com/dimitri/el-get][el-get]] you can install helm-clojure by the following recipe:
 #+BEGIN_SRC emacs-lisp
-  (:name smart-mode-line
+  (:name helm-clojure
          :type github
          :pkgname "prepor/helm-clojure"
          :features helm-clojure
