@@ -1,0 +1,19 @@
+* helm-clojure
+Emacs package based on [[https://github.com/emacs-helm/helm][helm]] and [[https://github.com/clojure-emacs/cider][cider]] for explore Clojure's project environment. You can quickly discover vars (functions, protocols etc.), read documentation, follow to definition, insert to current code by smart way.
+** Installation
+With [[https://github.com/dimitri/el-get][el-get]] you can install helm-clojure by the following recipe:
+#+BEGIN_SRC emacs-lisp
+  (:name smart-mode-line
+         :type github
+         :pkgname "prepor/helm-clojure"
+         :features helm-clojure
+         :depends (s dash cider helm yasnippet))
+#+END_SRC
+** References insertion
+helm-clojure smart enough to insert references with regard the current namespace.
+- if var or namespace in general already refered to namespace, it will be inserted without namespace;
+- if namespace already required with alias, it will be inserted with the same alias;
+- in other cases you will be suggested to choose alias with help of [[https://github.com/capitaomorte/yasnippet][yasnippet]] (TAB for complete)
+** Demo
+Some crazy video with not to much meaning
+[[http://i.vimeocdn.com/video/477270388_640.jpg][https://vimeo.com/97036449]]
