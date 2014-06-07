@@ -15,6 +15,6 @@ helm-clojure smart enough to insert references with regard the current namespace
 - if namespace already required with alias, it will be inserted with the same alias;
 - in other cases you will be suggested to choose alias with help of [[https://github.com/capitaomorte/yasnippet][yasnippet]] (TAB for complete)
 ** Demo
-[[https://raw.githubusercontent.com/prepor/helm-clojure/master/helm-clojure.gif]]
+[[https://raw.githubusercontent.com/prepor/helm-clojure/master/doc/gif.gif]]
 
 and [[https://vimeo.com/97036449][the some crazy video with not to much meaning]]
