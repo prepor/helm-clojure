@@ -1,5 +1,5 @@
 * helm-clojure
-Emacs package based on [[https://github.com/emacs-helm/helm][helm]] and [[https://github.com/clojure-emacs/cider][cider]] aims to explore Clojure's project environment. With helm-clojure you can quickly discover ANY clojure vars (functions, protocols etc.) avaliable in JVM, read it documentation, go to it definition and insert it into a current code by smart way.
+Emacs package based on [[https://github.com/emacs-helm/helm][helm]] and [[https://github.com/clojure-emacs/cider][cider]] aims to explore Clojure's project environment. With helm-clojure you can quickly discover ANY clojure var (function, protocol etc.) avaliable in JVM, read its documentation, go to its definition and insert it into a current code by a smart way.
 ** Installation
 With [[https://github.com/dimitri/el-get][el-get]] you can install helm-clojure by following the recipe:
 #+BEGIN_SRC emacs-lisp
@@ -12,7 +12,7 @@ With [[https://github.com/dimitri/el-get][el-get]] you can install helm-clojure 
 ** References insertion
 helm-clojure is smart enough to insert references with regard of the current namespace.
 - if var or var's namespace in general had already been refered to namespace, it will be inserted without namespace;
-- if namespace had already been required with alias, it will be inserted with the same alias;
+- if namespace had already been required with an alias, it will be inserted with the same alias;
 - in all other cases you will be offered to choose alias with the help of [[https://github.com/capitaomorte/yasnippet][yasnippet]] (TAB for complete)
 ** Demo
 [[https://raw.githubusercontent.com/prepor/helm-clojure/master/doc/gif.gif]]
