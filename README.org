@@ -1,7 +1,7 @@
 * helm-clojure
-Emacs package based on [[https://github.com/emacs-helm/helm][helm]] and [[https://github.com/clojure-emacs/cider][cider]] for explore Clojure's project environment. With helm-clojure you can quickly discover ANY clojure vars (functions, protocols etc.) avaliable in JVM, read documentation, follow to definition, insert to current code by smart way.
+Emacs package based on [[https://github.com/emacs-helm/helm][helm]] and [[https://github.com/clojure-emacs/cider][cider]] aims to explore Clojure's project environment. With helm-clojure you can quickly discover ANY clojure vars (functions, protocols etc.) avaliable in JVM, read it documentation, go to it definition and insert it into a current code by smart way.
 ** Installation
-With [[https://github.com/dimitri/el-get][el-get]] you can install helm-clojure by the following recipe:
+With [[https://github.com/dimitri/el-get][el-get]] you can install helm-clojure by following the recipe:
 #+BEGIN_SRC emacs-lisp
   (:name helm-clojure
          :type github
@@ -10,11 +10,11 @@ With [[https://github.com/dimitri/el-get][el-get]] you can install helm-clojure 
          :depends (s dash cider helm yasnippet))
 #+END_SRC
 ** References insertion
-helm-clojure smart enough to insert references with regard the current namespace.
-- if var or namespace in general already refered to namespace, it will be inserted without namespace;
-- if namespace already required with alias, it will be inserted with the same alias;
-- in other cases you will be suggested to choose alias with help of [[https://github.com/capitaomorte/yasnippet][yasnippet]] (TAB for complete)
+helm-clojure is smart enough to insert references with regard of the current namespace.
+- if var or var's namespace in general had already been refered to namespace, it will be inserted without namespace;
+- if namespace had already been required with alias, it will be inserted with the same alias;
+- in all other cases you will be offered to choose alias with the help of [[https://github.com/capitaomorte/yasnippet][yasnippet]] (TAB for complete)
 ** Demo
 [[https://raw.githubusercontent.com/prepor/helm-clojure/master/doc/gif.gif]]
 
-and [[https://vimeo.com/97036449][the some crazy video with not to much meaning]]
+and [[https://vimeo.com/97036449][here is a crazy video with not too much meaning]]
