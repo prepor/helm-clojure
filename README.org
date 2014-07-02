@@ -11,9 +11,9 @@ With [[https://github.com/dimitri/el-get][el-get]] you can install helm-clojure 
 #+END_SRC
 ** References insertion
 helm-clojure is smart enough to insert references with regard of the current namespace.
-- if var or var's namespace in general had already been refered to namespace, it will be inserted without namespace;
+- if var or var's namespace in general had already been referred to namespace, it will be inserted without namespace;
 - if namespace had already been required with an alias, it will be inserted with the same alias;
-- in all other cases you will be offered to choose alias with the help of [[https://github.com/capitaomorte/yasnippet][yasnippet]] (TAB for complete)
+- in all other cases you will be offered to choose an alias with the help of [[https://github.com/capitaomorte/yasnippet][yasnippet]] (TAB for complete)
 ** Demo
 [[https://raw.githubusercontent.com/prepor/helm-clojure/master/doc/gif.gif]]
 
