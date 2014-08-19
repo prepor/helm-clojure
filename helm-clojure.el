@@ -92,7 +92,7 @@
   (concat (plist-get c :ns) "/" (plist-get c :symbol)))
 
 (defun helm-clojure-jump (c)
-  (cider-jump-to-def (helm-clojure-candidate-to-sym c))
+  (cider-jump-to-var (helm-clojure-candidate-to-sym c))
   (helm-highlight-current-line))
 
 (defun helm-clojure-doc (c)
