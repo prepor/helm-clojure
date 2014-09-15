@@ -252,7 +252,7 @@ if SAVE-EXCURSION is T POINT does not move."
 ;; - TODO check jump backs
 ;;;###autoload
 (defun helm-clojure ()
-  "`helm' mode for clojrue based on `cider'."
+  "`helm' mode for clojure based on `cider'."
   (interactive)
   (helm :sources 'helm-source-clojure
         :buffer "*helm clojure*"))
