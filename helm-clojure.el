@@ -43,7 +43,7 @@
 
 (defun helm-clojure-inject ()
   (let* ((res (nrepl-send-string-sync "(find-ns 'helm-clojure)")))
-    (when (equal "nil" (plist-get res :value))
+    (when (equal "nil" (nrepl-dict-get res "value"))
       (nrepl-send-string-sync
        (helm--get-string-from-file
         (expand-file-name "helm-clojure.clj" (file-name-directory
@@ -63,7 +63,7 @@
          (sep (make-string (- (+ helm-clojure-f-width 2) (string-width sym)) ? ))
          (res (-if-let (doc (plist-get m :doc))
                   (concat sym sep
-                          (helm-substring-by-width doc (- width (+ helm-clojure-f-width 5))))
+                          (helm-substring-by-width doc (- width (+ helm-clojure-f-width 6))))
                 sym)))
     (cons res m)))
 
@@ -72,7 +72,7 @@
                        (replace-regexp-in-string "[\\\"]" "\\\\\\&" helm-pattern)
                        "\")"))
          (res (nrepl-send-string-sync code))
-         (cands (car (read-from-string (plist-get res :value)))))
+         (cands (car (read-from-string (nrepl-dict-get res "value")))))
     (-map 'helm-clojure-display cands)))
 
 (defun helm-clojure-candidates ()
