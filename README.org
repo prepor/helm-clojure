@@ -7,7 +7,7 @@ With [[https://github.com/dimitri/el-get][el-get]] you can install helm-clojure 
          :type github
          :pkgname "prepor/helm-clojure"
          :features helm-clojure
-         :depends (s dash cider helm yasnippet))
+         :depends (s dash cider helm yasnippet smartparens))
 #+END_SRC
 ** References insertion
 helm-clojure is smart enough to insert references with regard of the current namespace.
